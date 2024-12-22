@@ -31,3 +31,9 @@ jobs:
                             
             - name: Publish
               run: dotnet publish src/GitHubActionsDotNet.Api/GitHubActionsDotNet.Api.csproj --configuration Release -o artifacts
+
+            - uses: actions/upload-artifact@v4
+              with:
+                name: artifact-upload
+                path: artifacts/ 
+
