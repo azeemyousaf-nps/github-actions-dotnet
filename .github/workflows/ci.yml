@@ -37,7 +37,7 @@ jobs:
 
             - uses: actions/upload-artifact@v4
               with:
-                name: artifact-upload
+                name: artifact-app
                 path: artifacts/ 
     deploy_dev:
       name: CD
@@ -55,7 +55,7 @@ jobs:
 
         - uses: actions/download-artifact@v4
           with:
-            name: artifact-download
+            name: artifact-app
             path: artifacts/ 
 
         - name: 'Run Azure webapp deploy action using publish profile credentials'
